@@ -1,0 +1,90 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-image: url(https://images.wallpaperscraft.com/image/single/eruption_lava_volcano_oriental_cherry_tree_45542_1920x1080.jpg);
+    background-size: cover;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: rgb(255, 255, 255);
+}
+
+.sidenav {
+    height: 100%;
+    background-color: hsla(310, 58%, 77%, 0.7);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 35%;
+    padding: 100px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: rgb(223, 19, 121) !important;
+    color: rgb(255, 255, 255);
+}
+.login-form{
+    color: rgb(255, 224, 188);
+    font-size: 23px;
+    padding: 50px;
+    margin-top: 55%;
+}
+.login-main-text{
+    margin-top:35%;
+    padding: 80px;
+    color: rgb(255, 255, 255);
+}
+h1{
+    font-size: 100px;
+}

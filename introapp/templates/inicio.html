@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %} " >  
+    <title>Acerca de</title>
+    
+
+</head>
+
+<body>
+
+
+
+
+    <header class="primero">
+        <a href="" class="logo">
+            <img src="{% static 'planet.jpg' %}"
+            <h1 >  </h1>
+        <h1>Fake News Nemesis</h1>
+        </a>
+
+        <nav>
+            {% block content %}
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="nav-link">Salir</a>
+                {% else %}
+                <a href="{% url 'login_url' %}" class="nav-link">Ingresa</a>
+                <a href="{% url 'register_url' %}" class="nav-link">Regístrate</a>
+            {% endif %}
+           
+            {% endblock %}
+        </nav>
+
+
+    </header>
+
+</body>
+    <header class="fondo-noticia">
+  <h1 class="noticia">Noticias</h1>
+    </header>
+    <header class="segundo">
+        
+    
+        
+    <div class="row">
+        <div class="lef-column">
+            <div class="card">
+            <h2>TItulo</h2>
+            <h5>descripcion titulo</h5>
+            <img src="{% static 'bluntmario.jpg' %}" class="logo2" >
+            <p></p>asdasd
+            <p></p>texto de descripcion
+            </div>
+            <div class="card">
+                <h2>TItulo</h2>
+                <h5>descripcion titulo</h5>
+                <img src="{% static 'bluntmario.jpg' %}" class="logo2" >
+                <p></p>asdasd
+                <p></p>texto de descripcion
+                </div>
+                <div class="card">
+                    <h2>TItulo</h2>
+                    <h5>descripcion titulo</h5>
+                    <img src="{% static 'bluntmario.jpg' %}" class="logo2" >
+                    <p></p>asdasd
+                    <p></p>texto de descripcion
+                    </div>
+        <div class="right-column">
+
+        </div>
+        </div>
+
+    </div>
+</header>
+
+    
+
+
+
+
+</html>

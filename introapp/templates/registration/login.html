@@ -1,0 +1,41 @@
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'plantilla.css' %}">
+</head>
+
+<div class="sidenav">
+    <div class="login-main-text">
+       <h1>¡Bienvenido de nuevo!</h1>
+       <h2>Inicia sesion para una nueva experiencia.</h2>
+       <p>Si aun no tienes una cuenta resgistrate en 3 simples pasos.</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+        <form class="form-content" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+             <div class="form-group">
+                {{ form.username|as_crispy_field }}
+             </div>
+             <div class="form-group">
+                {{ form.password|as_crispy_field }}
+             </div>
+             <div>
+               <button type="submit" class="btn btn-black">Ingresar</button>
+               <a href="{% url 'register_url' %}" class="btn btn-q">registrate</a>
+            </div>
+          </form>
+       </div>
+    </div>
+ </div>
+
+{% endblock %}
